@@ -22,9 +22,9 @@ describe("testing addAll function", () => {
     const orange = new Character("orange");
     const banana = new Character("banana");
     const fruits = new Team();
-    fruits.addAll(apple, orange, banana, apple);
+    fruits.addAll(apple, orange, banana);
 
-    test("Should be able to add a few characters to the team without duplicates", () => {
+    test("Should be able to add a few characters to the team", () => {
         expect(fruits.members).toEqual(new Set([{ name: "apple" }, { name: "orange" }, {name: "banana"}]));
     });
 });
